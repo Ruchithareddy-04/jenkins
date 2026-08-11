@@ -1,0 +1,16 @@
+pipeline {
+    agent any {
+        stages {
+            stage('build and test')
+                steps {
+                    echo "build and test completed"
+                }
+            }
+       }
+    
+    post {
+        success {
+            echo "successfully completed"
+        }
+    }
+}
